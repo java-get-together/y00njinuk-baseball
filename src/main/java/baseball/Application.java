@@ -1,10 +1,39 @@
 package baseball;
 
+import camp.nextstep.edu.missionutils.Console;
+import camp.nextstep.edu.missionutils.Randoms;
+
+import java.util.HashMap;
 import java.util.Map;
 
 public class Application {
+    static final int MAX_SIZE = 3;
+
     public static void main(String[] args) {
-        //TODO: 숫자 야구 게임 구현
+        Map<Integer, Integer> numMap = new HashMap();
+        int exitCode;
+
+        do {
+            numMap.clear();
+
+            while(numMap.size() < MAX_SIZE){
+                int num = Randoms.pickNumberInRange(1, 9);
+
+                if(numMap.containsKey(num))
+                    continue;
+                else
+                    numMap.put(num, numMap.size());
+            }
+            boolean isMatched = false;
+
+            while(!isMatched) {
+                System.out.print("숫자를 입력해주세요 : ");
+                int[] numArray = toIntArray(Console.readLine().getBytes());
+                isMatched = compareWith(numMap, numArray);
+            }
+
+            exitCode = Integer.parseInt(Console.readLine());
+        } while(exitCode != 2);
     }
 
     private static int[] toIntArray(byte[] bArray) {
