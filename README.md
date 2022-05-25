@@ -6,6 +6,18 @@
 - 변환된 입력값을 검증하는 메소드 추가
 - build.gradle에 UTF8 encoding 기능 추가
 ---
+## 테스트 결과
+```
+PS C:\Users\goan1\IdeaProjects\y00njinuk-baseball> .\gradlew clean test 
+
+> Task :compileJava
+Note: C:\Users\goan1\IdeaProjects\y00njinuk-baseball\src\main\java\baseball\Application.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+BUILD SUCCESSFUL in 12s
+4 actionable tasks: 4 executed
+```
+---
 
 ## 🔍 진행방식
 
