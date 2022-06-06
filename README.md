@@ -1,5 +1,24 @@
 # 미션 - 숫자 야구 게임
 
+---
+## 기능 구현 목록은 다음과 같다.
+- 문자열 타입의 입력값을 정수형 배열로 변환하는 메소드 추가
+- 변환된 입력값을 검증하는 메소드 추가
+- build.gradle에 UTF8 encoding 기능 추가
+---
+## 테스트 결과
+```
+PS C:\Users\goan1\IdeaProjects\y00njinuk-baseball> .\gradlew clean test 
+
+> Task :compileJava
+Note: C:\Users\goan1\IdeaProjects\y00njinuk-baseball\src\main\java\baseball\Application.java uses unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+
+BUILD SUCCESSFUL in 12s
+4 actionable tasks: 4 executed
+```
+---
+
 ## 🔍 진행방식
 
 - 미션은 **기능 요구사항, 프로그래밍 요구사항, 과제 진행 요구사항** 세 가지로 구성되어 있다.
